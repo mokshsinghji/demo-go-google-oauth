@@ -8,5 +8,6 @@ import (
 
 func RegisterRoutes(app *fiber.App) {
 	app.Get("/", handlers.HomePage)
-	app.Get("/login/google", login.LoginWithGoogle)
+	app.Get("/login/google", login.WithGoogle)
+	app.Get("/login/google/callback", login.GoogleCallback)
 }
